@@ -27,7 +27,7 @@ class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
-        serachBar.barTintColor = .systemGreen.withAlphaComponent(0.5)
+        serachBar.barTintColor = .systemMint.withAlphaComponent(0.5)
     }
     
     // MARK: - this section for tableviewdatasource.
@@ -40,7 +40,7 @@ class TodoListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! SwipeTableViewCell
         cell.textLabel?.text =  itemCell?.title ?? ""
         cell.accessoryType = itemCell?.isDone ?? false ? .checkmark : .none
-        cell.backgroundColor = .systemGreen.withAlphaComponent(0.5)
+        cell.backgroundColor = .systemTeal.withAlphaComponent(0.5)
         cell.delegate = self
         return cell
     }
