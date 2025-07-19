@@ -111,7 +111,7 @@ extension TodoListViewController: UISearchBarDelegate {
     
     // MARK: - create searchbar text change method for go to orginal todo list.
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0 {
+        if searchBar.text?.isEmpty {
             self.loadedItems()
             DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
